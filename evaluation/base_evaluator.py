@@ -1,13 +1,13 @@
 import os
 
 
-class BaseEvaluator():
+class BaseEvaluator(): #基本评估器
     @staticmethod
     def modify_commandline_options(parser, is_train):
-        return parser
+        return parser 
 
     def __init__(self, opt, target_phase):
-        super().__init__()
+        super().__init__() #继承
         self.opt = opt
         self.target_phase = target_phase
 
