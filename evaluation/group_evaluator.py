@@ -39,8 +39,8 @@ def find_evaluator_classes(opt):
 
 class GroupEvaluator(BaseEvaluator):
     @staticmethod
-    def modify_commandline_options(parser, is_train):
-        parser.add_argument("--evaluation_metrics", default="none")
+    def modify_commandline_options(parser, is_train): #修改命令行选项
+        parser.add_argument("--evaluation_metrics", default="none") #增加评价指标项
 
         opt, _ = parser.parse_known_args()
         evaluator_classes, _ = find_evaluator_classes(opt)
